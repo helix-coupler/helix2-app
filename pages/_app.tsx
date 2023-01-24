@@ -4,6 +4,7 @@ import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
+import '../styles/global.css';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -15,16 +16,36 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
   };
 
+  const theme = {
+    gradientDark: {
+      from: 'pink',
+      to: 'blue',
+      deg: 45,
+    },
+    gradientLight: {
+      from: 'blue',
+      to: 'pink',
+      deg: 45,
+    },
+  };
+
   return (
     <>
       <Head>
-        <title>Mantine next example</title>
+        <title>Helix2</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
+        <MantineProvider
+          theme={{
+            colorScheme: colorScheme,
+            defaultGradient: colorScheme === 'dark' ? theme.gradientDark : theme.gradientLight,
+          }}
+          withGlobalStyles
+          withNormalizeCSS
+        >
           <NotificationsProvider>
             <Component {...pageProps} />
           </NotificationsProvider>

@@ -2,13 +2,14 @@ import { createStyles } from '@mantine/core';
 
 export default createStyles((theme) => ({
   title: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    fontFamily: 'SFPro',
     fontSize: 100,
     fontWeight: 900,
-    letterSpacing: -2,
+    letterSpacing: 5,
 
     [theme.fn.smallerThan('md')]: {
       fontSize: 50,
+      fontFamily: 'Tenika',
     },
   },
 }));

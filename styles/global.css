@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Tenika';
+    src: url('../public/fonts/Tenika-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+@font-face {
+    font-family: 'SFMono';
+    src: url('../public/fonts/SF-Mono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+@font-face {
+    font-family: 'SFPro';
+    src: url('../public/fonts/SF-Pro-Rounded-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+@font-face {
+    font-family: 'SFProBold';
+    src: url('../public/fonts/SF-Pro-Rounded-Semibold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+@font-face {
+    font-family: 'Spotnik';
+    src: url('../public/fonts/Spotnik-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

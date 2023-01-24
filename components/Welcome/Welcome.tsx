@@ -1,24 +1,38 @@
 import { Title, Text, Anchor } from '@mantine/core';
 import useStyles from './Welcome.styles';
+import Image from 'next/image';
 
 export function Welcome() {
   const { classes } = useStyles();
 
   return (
     <>
-      <Title className={classes.title} align="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span">
-          Mantine
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Image src="../../logo.svg" alt="logo" width={200} height={200} />
+      </div>
+      <Title className={classes.title} align="center" mt={2}>
+        <Text
+          variant="gradient"
+          component="span"
+          sx={{ fontFamily: 'SFPro', fontSize: 117, fontWeight: 900 }}
+        >
+          HELIX2
         </Text>
       </Title>
-      <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
+      <Text
+        color="dimmed"
+        align="center"
+        size="lg"
+        sx={{ fontFamily: 'Spotnik', maxWidth: 580, fontWeight: 900 }}
+        mx="auto"
+        mt="xl"
+      >
+        next-gen name and link service
       </Text>
     </>
   );
